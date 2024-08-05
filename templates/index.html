@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Bulk Delete Viewer</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chez's Bulk Delete Viewer</h1>
+        <br>
+      <form method="post">
+        <div class="form-group">
+          <label for="url">Log URL</label>
+          <input type="text" class="form-control" id="url" name="url" required>
+        </div>
+        <button type="submit" class="btn btn-primary">View</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Messages</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="back-button-container">
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back</a>
+      </div>
+      <h1>Deleted Messages in <font color = "#99faff">{{ channel_name }}</font></h1>
+      {% for item in data %}
+        <p><strong>{{ item.user }}</strong> ({{ item.id }}) at {{ item.time }}, {{ item.date }}:</p>
+        <p>{{ item.message }}</p>
+        <hr>
+      {% endfor %}
+      <p style="color:#bababa; font-size:10pt;">{{ creation_date }}</p>
+    </div>
+  </body>
+</html>
